@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)https://crymore.biz/ -->
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="icon" type="image/png" sizes="32x32" href="Content/Landing/images/fav.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Content/Landing/images/fav.png">
+
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="Content/Landing/style.css" rel="stylesheet">
+	<link href="Content/Landing/responsive.css" rel="stylesheet">
+
+	<link rel="stylesheet" media="all" href="./src/style.css">
+
+	<script type="text/javascript" async="" src="./src/analytics.js"></script>
+	<script async="" src="./src/tag.js"></script>
+	<script type="text/javascript" async="" src="./src/watch.js"></script>
+	<script async="" src="./src/analytics.js"></script>
+	<script src="./src/jquery.min.js"></script>
+	<link rel="stylesheet" href="./src/jquery-ui.css">
+	<script src="./src/jquery-ui.min.js"></script>
+	<script>
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip({ html:true }); 
+		});
+		var shop_currency = 'rub';
+	</script>
+
+	<script>
+		var shopMessages = {
+			0: "Такого кол-ва товара нет",
+			1: "Вы уверены, что хотите прервать процесс покупки?",
+			2: "Укажите Email адрес",
+			3: "Мин. кол-во товара",
+			4: "Такого количества товара нет",
+			5: "Выберите способ оплаты",
+			6: "Оплата еще не дошла до нас, попробуйте еще раз. <br>Или свяжитесь с нашим агентом в Telegram!",
+		};
+	</script>
+	<script src="./src/shop.new.js"></script>
+</head>
+
+<body style="background: #6f38ab; margin: 0 auto;">
+	<div class="choose_popup" style="display: block;">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<a class="navbar-brand page-scroll" title=""><img src="Content/Landing/images/logo.png"></a>
+				</div>
+			</div>
+		<div class="popup-modal">
+			<div class="title">Оплата</div>
+			<form action="https://crymore.biz/pay/" method="post" id="pay">
+					<input type="hidden" name="csrf_token" value="ec9e25a0010e9c7e316f78e89cb071ef">
+					<input type="hidden" name="order" value="12969889">
+					<input type="hidden" name="secret" value="fc3801018d9868be">
+					<table class="table table-striped table-bordered table-hover">
+						<tbody>
+							<tr>
+								<td>Товар</td>
+								<td class="title">WhatsApp Spam</td>
+							</tr>
+							<tr>
+								<td>Кол-во</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>К оплате</td>
+								<td>
+									3500 руб
+								</td>
+							</tr>
+							<tr>
+								<td>Оплата на карту Сбербанка</td>
+								<td>
+									<p>4276 4900 2155 0696</p>
+								</td>
+							</tr>
+							<tr>
+								<td>Примечание</td>
+								<td><script type="text/javascript">document.write(Math.floor(Math.random() * 100000));</script></td>
+							</tr>
+							<tr>
+								<td colspan="2" class="attention">
+									Внимание! Очень важно чтобы вы переводили деньги с этим примечанием, иначе средства не будут зачислены автоматически.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="check_pay">
+						<tbody>
+							<tr>
+								<td style="width: 250px;" class="check">Ждем оплаты..</td>
+								<td style="text-align: right;">
+									<input type="submit" class="btn btn-default btn-primary" value="Проверить оплату">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				<div>
+					<br>Для оплаты другими методами пишите оператору (QIWI, Bitcoin, Приват банк).
+				</div>
+			<a href="https://tele.click/supwhatsapp" target="_blank" style="color: #fff">
+				<div class="button" style="border: 1px solid #fff; margin: 50px">
+					Обратиться к оператору Telegram
+				</div>
+			</a>
+		</div>
+	</div>
+
+
+<script src="./src/bootstrap.min.js"></script>
+
+<style type="text/css">
+body {
+background: #000 url(/static/images/templates/alyssum/bg.jpg) no-repeat center top
+}
+</style>
+<script type="text/javascript">
+//seo fix
+if ( document.domain.substring(0,4) == 'www.' ) {
+window.location = document.URL.replace("//www.", "//"); 
+}
+
+$('#navbar ul li:first-child a').text('Продажа аккаунтов ВК');
+</script>
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+// start pay
+$('button.btn-success').click(function () {
+ga('seoTracker.send', 'event', 'button', 'click', 'payment');
+ym(52544662, 'reachGoal', 'payment1');
+});
+// pay
+$('.popup-modal').on('click', 'input[type="submit"][value="Перейти к оплате"]', function () {
+ga('seoTracker.send', 'event', 'button', 'click', 'payment2');
+ym(52544662, 'reachGoal', 'payment2')
+});
+// check
+$('.popup-modal').on('click', 'input[type="submit"][value="Проверить оплату"]', function () {
+ga('seoTracker.send', 'event', 'button', 'click', 'check');
+ym(52544662, 'reachGoal', 'check')
+});
+});
+</script>
+
+</body>
+</html>
